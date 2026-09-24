@@ -1,0 +1,7 @@
+[
+  {"name":"theme_info","theme_name":"NEXORA Premium Starter","theme_version":"1.0.0","theme_author":"Custom"},
+  {"name":"Couleurs","settings":[
+    {"type":"color","id":"background","label":"Fond","default":"#ffffff"},
+    {"type":"color","id":"text","label":"Texte","default":"#111820"}
+  ]}
+]
