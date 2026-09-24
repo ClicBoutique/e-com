@@ -1,0 +1,13 @@
+<section class="feature-bar">
+  <div class="page-width feature-grid">
+    {% for block in section.blocks %}
+      <div class="feature-item" {{ block.shopify_attributes }}>
+        <span class="feature-icon">{{ block.settings.icon }}</span>
+        <div><strong>{{ block.settings.title }}</strong><span>{{ block.settings.text }}</span></div>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+{% schema %}
+{"name":"Barre d'avantages","blocks":[{"type":"item","name":"Avantage","settings":[{"type":"text","id":"icon","label":"Icône","default":"✦"},{"type":"text","id":"title","label":"Titre","default":"Design élégant"},{"type":"text","id":"text","label":"Texte","default":"S'intègre facilement à votre intérieur"}]}],"presets":[{"name":"Barre d'avantages","blocks":[{"type":"item","settings":{"icon":"◉","title":"Sans contact","text":"Ouverture automatique"}},{"type":"item","settings":{"icon":"◇","title":"Design premium","text":"Sobre et moderne"}},{"type":"item","settings":{"icon":"↻","title":"Recharges","text":"6 ou 12 unités"}},{"type":"item","settings":{"icon":"✓","title":"Pensée pour durer","text":"Conçue pour le quotidien"}}]}
+{% endschema %}

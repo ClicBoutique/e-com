@@ -1,1 +1,16 @@
-
+<section class="faq">
+  <div class="page-width">
+    <div class="section-head"><h2>{{ section.settings.heading }}</h2><p>{{ section.settings.text }}</p></div>
+    <div class="faq-list">
+      {% for block in section.blocks %}
+        <details class="faq-item" {{ block.shopify_attributes }}>
+          <summary>{{ block.settings.question }}</summary>
+          <p>{{ block.settings.answer }}</p>
+        </details>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% schema %}
+{"name":"FAQ","settings":[{"type":"text","id":"heading","label":"Titre","default":"Questions fréquentes"},{"type":"text","id":"text","label":"Sous-titre","default":"Les informations essentielles avant votre commande."}],"blocks":[{"type":"faq","name":"Question","settings":[{"type":"text","id":"question","label":"Question","default":"Comment fonctionne la poubelle intelligente ?"},{"type":"textarea","id":"answer","label":"Réponse","default":"Ajoutez ici votre réponse exacte et vérifiée."}]}],"presets":[{"name":"FAQ","blocks":[{"type":"faq"},{"type":"faq","settings":{"question":"Quels sont les délais de livraison ?","answer":"Ajoutez ici vos délais réels selon votre fournisseur et votre destination."}},{"type":"faq","settings":{"question":"Comment fonctionnent les recharges ?","answer":"Ajoutez ici les informations exactes de vos recharges."}}]}
+{% endschema %}

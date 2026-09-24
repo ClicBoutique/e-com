@@ -1,0 +1,20 @@
+<header class="nex-header">
+  <div class="page-width nex-header-inner">
+    <a class="nex-logo" href="{{ routes.root_url }}">{{ section.settings.logo_text }}</a>
+    <nav class="nex-nav" aria-label="Navigation">
+      <a href="{{ routes.root_url }}">Accueil</a>
+      <a href="{{ routes.all_products_collection_url }}">Boutique</a>
+      <a href="/pages/a-propos">À propos</a>
+      <a href="/pages/avis">Avis</a>
+      <a href="/pages/contact">Contact</a>
+    </nav>
+    <div class="nex-actions">
+      <a href="{{ routes.search_url }}" aria-label="Rechercher">⌕</a>
+      <a href="{{ routes.account_url }}" aria-label="Compte">♙</a>
+      <a href="{{ routes.cart_url }}" aria-label="Panier">🛍</a>
+    </div>
+  </div>
+</header>
+{% schema %}
+{"name":"En-tête","settings":[{"type":"text","id":"logo_text","label":"Nom de la marque","default":"NEXORA"}]}
+{% endschema %}

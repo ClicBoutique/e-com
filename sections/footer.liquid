@@ -1,0 +1,13 @@
+<footer class="footer">
+  <div class="page-width">
+    <div class="footer-grid">
+      <div><h3>{{ section.settings.brand }}</h3><p>{{ section.settings.text }}</p></div>
+      <div><h3>Boutique</h3><p><a href="{{ routes.all_products_collection_url }}">Tous les produits</a><br><a href="/pages/contact">Contact</a></p></div>
+      <div><h3>Informations</h3><p><a href="/policies/privacy-policy">Confidentialité</a><br><a href="/policies/terms-of-service">Conditions</a><br><a href="/policies/refund-policy">Retours</a></p></div>
+    </div>
+    <div class="footer-bottom">© {{ 'now' | date: '%Y' }} {{ shop.name }}. Tous droits réservés.</div>
+  </div>
+</footer>
+{% schema %}
+{"name":"Pied de page","settings":[{"type":"text","id":"brand","label":"Nom","default":"NEXORA"},{"type":"textarea","id":"text","label":"Texte","default":"Des produits utiles, un design soigné et une expérience simple."}]}
+{% endschema %}
